@@ -7,12 +7,17 @@ package _02_backpack;
 public class Backpack {
 	private Pencil pencil;
 	private Ruler ruler;
-	private Textbook textbook;
-
+	private Textbook textbook; 
 	public void packAndCheck() {
 		// Your mission is to go to school.
 		// 1. First you need to put all your supplies into your backpack - use
 		// the putInBackpack(...) methods
+		pencil = new Pencil();
+		ruler = new Ruler();
+		textbook = new Textbook();
+		putInBackpack(pencil);
+		putInBackpack(ruler);
+		putInBackpack(textbook);
 
 		goToSchool();
 	}
@@ -22,6 +27,7 @@ public class Backpack {
 	public void putInBackpack(Pencil supply) {
 		this.pencil = supply;
 		log(supply);
+		
 	}
 
 	public void putInBackpack(Ruler supply) {
@@ -33,6 +39,7 @@ public class Backpack {
 		this.textbook = supply;
 		log(supply);
 	}
+	
 
 	private void log(Supply supply) {
 		String description;
